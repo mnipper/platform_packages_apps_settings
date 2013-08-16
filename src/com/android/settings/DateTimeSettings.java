@@ -141,11 +141,15 @@ public class DateTimeSettings extends SettingsPreferenceFragment
         mDateFormat.setEntryValues(R.array.date_format_values);
         mDateFormat.setValue(currentFormat);
 
+        // MODIFY
         /*
         mTimePref.setEnabled(!autoTimeEnabled);
         mDatePref.setEnabled(!autoTimeEnabled);
         mTimeZone.setEnabled(!autoTimeZoneEnabled);
         */
+        mTimePref.setEnabled(false);
+        mDatePref.setEnabled(false);
+        mTimeZone.setEnabled(false);
     }
 
     @Override
@@ -224,13 +228,18 @@ public class DateTimeSettings extends SettingsPreferenceFragment
             boolean autoEnabled = preferences.getBoolean(key, true);
             Settings.Global.putInt(getContentResolver(), Settings.Global.AUTO_TIME,
                     autoEnabled ? 1 : 0);
+            // MODIFY
             //mTimePref.setEnabled(!autoEnabled);
             //mDatePref.setEnabled(!autoEnabled);
+            mTimePref.setEnabled(false);
+            mDatePref.setEnabled(false);
         } else if (key.equals(KEY_AUTO_TIME_ZONE)) {
             boolean autoZoneEnabled = preferences.getBoolean(key, true);
             Settings.Global.putInt(
                     getContentResolver(), Settings.Global.AUTO_TIME_ZONE, autoZoneEnabled ? 1 : 0);
+            // MODIFY
             //mTimeZone.setEnabled(!autoZoneEnabled);
+            mTimeZone.setEnabled(false);
         }
     }
 
