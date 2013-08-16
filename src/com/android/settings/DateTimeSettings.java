@@ -141,9 +141,11 @@ public class DateTimeSettings extends SettingsPreferenceFragment
         mDateFormat.setEntryValues(R.array.date_format_values);
         mDateFormat.setValue(currentFormat);
 
+        /*
         mTimePref.setEnabled(!autoTimeEnabled);
         mDatePref.setEnabled(!autoTimeEnabled);
         mTimeZone.setEnabled(!autoTimeZoneEnabled);
+        */
     }
 
     @Override
