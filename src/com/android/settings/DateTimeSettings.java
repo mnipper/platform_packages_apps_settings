@@ -224,13 +224,13 @@ public class DateTimeSettings extends SettingsPreferenceFragment
             boolean autoEnabled = preferences.getBoolean(key, true);
             Settings.Global.putInt(getContentResolver(), Settings.Global.AUTO_TIME,
                     autoEnabled ? 1 : 0);
-            mTimePref.setEnabled(!autoEnabled);
-            mDatePref.setEnabled(!autoEnabled);
+            //mTimePref.setEnabled(!autoEnabled);
+            //mDatePref.setEnabled(!autoEnabled);
         } else if (key.equals(KEY_AUTO_TIME_ZONE)) {
             boolean autoZoneEnabled = preferences.getBoolean(key, true);
             Settings.Global.putInt(
                     getContentResolver(), Settings.Global.AUTO_TIME_ZONE, autoZoneEnabled ? 1 : 0);
-            mTimeZone.setEnabled(!autoZoneEnabled);
+            //mTimeZone.setEnabled(!autoZoneEnabled);
         }
     }
 
