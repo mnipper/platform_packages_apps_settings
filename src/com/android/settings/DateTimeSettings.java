@@ -144,6 +144,10 @@ public class DateTimeSettings extends SettingsPreferenceFragment
         mTimePref.setEnabled(false);
         mDatePref.setEnabled(false);
         mTimeZone.setEnabled(false);
+        mDateFormat.setEnabled(false);
+        mAutoTimePref.setEnabled(false);
+        mAutoTimeZonePref.setEnabled(false);
+        mTime24Pref.setEnabled(false);
     }
 
     @Override
