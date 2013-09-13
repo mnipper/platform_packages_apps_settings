@@ -99,6 +99,7 @@ public class Settings extends PreferenceActivity
 
     // Show only these settings for restricted users
     private int[] SETTINGS_FOR_RESTRICTED = {
+            R.id.wifi_settings,
             R.id.wireless_section,
             R.id.data_usage_settings,
             R.id.wireless_settings,
